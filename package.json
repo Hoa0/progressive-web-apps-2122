@@ -2,12 +2,13 @@
   "name": "project-pwa",
   "version": "1.0.0",
   "description": "this is a minor project for pwa",
-  "main": "index.js",
+  "main": "app.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
   },
   "scripts": {
+    "start":"npm app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Hoa0/progressive-web-apps-2122/issues"
   },
-  "homepage": "https://github.com/Hoa0/progressive-web-apps-2122#readme"
+  "homepage": "https://github.com/Hoa0/progressive-web-apps-2122#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
