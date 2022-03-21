@@ -1,0 +1,23 @@
+{
+  "name": "project-pwa",
+  "version": "1.0.0",
+  "description": "this is a minor project for pwa",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hoa0/progressive-web-apps-2122.git"
+  },
+  "author": "Thuan-Hoa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hoa0/progressive-web-apps-2122/issues"
+  },
+  "homepage": "https://github.com/Hoa0/progressive-web-apps-2122#readme"
+}
