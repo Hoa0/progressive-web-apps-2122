@@ -2,14 +2,13 @@
   "name": "project-pwa",
   "version": "1.0.0",
   "description": "this is a minor project for pwa",
-  "main": "app.js",
+  "main": "docs/app.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
   },
   "scripts": {
-    "start":"npm app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node docs/app.js"
   },
   "repository": {
     "type": "git",
