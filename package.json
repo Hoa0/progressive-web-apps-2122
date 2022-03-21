@@ -1,20 +1,21 @@
 {
   "name": "project-pwa",
   "version": "1.0.0",
-  "description": "this is a minor project for pwa",
-  "main": "docs/app.js",
+  "description": "this is a project for minor pwa",
+  "main": "app.js",
   "directories": {
     "doc": "docs",
     "example": "examples"
   },
   "scripts": {
-    "start": "node docs/app.js"
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hoa0/progressive-web-apps-2122.git"
   },
-  "author": "Thuan-Hoa",
+  "author": "Thuan-Hoa Le",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Hoa0/progressive-web-apps-2122/issues"
@@ -23,5 +24,8 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
