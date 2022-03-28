@@ -18,14 +18,14 @@ app.set('view engine', 'ejs')
 const {
     API_KEY
 } = process.env
-
+/*
 app.get('/', (req, res) => {
   res.render('home',{
     title:'List of all artcollection hi'
   });
 });
 
-/*
+
 app.get('/overview', async(req, res) => {
  const getData = await fetch(endpoint);
  const json = await getData.json();
@@ -36,11 +36,11 @@ console.log(json);
   });
 });*/
 
-app.get('/overview', (req, res) => {
+app.get('/', (req, res) => {
     fetch(endpoint)
         .then(async response => {
             const artCollection = await response.json()
-            res.render('overview', {
+            res.render('index', {
                 title: 'overzicht iets',
                 data: artCollection.artObjects
                 
