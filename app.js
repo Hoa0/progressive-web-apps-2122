@@ -50,6 +50,18 @@ app.get('/', (req, res) => {
         .catch(err => res.send(err))
 })
 
+app.get('/details/:id', (req, res) => {
+    fetch(`${baseURL}/${req.params.id}${key}`)
+        .then(async response => {
+            const artCollection = await response.json()
+            res.render('details', {
+                title: 'details',
+                data: artCollection.artObjects
+                
+            })
+        })
+        .catch(err => res.send(err))
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
