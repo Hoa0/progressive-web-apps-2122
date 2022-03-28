@@ -1,0 +1,15 @@
+<% data.map((artItem)=> {
+
+    %>
+    <li>
+        <a>
+            <figure>
+                <img src="<%= artItem.webImage.url %>" alt="image art">
+                <figcaption>
+                    <%= artItem.title %>
+                </figcaption>
+            </figure>
+        </a>
+    </li>
+
+    <% }) %>
