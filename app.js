@@ -37,26 +37,26 @@ console.log(json);
 });*/
 
 app.get('/', (req, res) => {
-    fetch(endpoint)
+    fetch(`${baseURL}/${key}`)
         .then(async response => {
             const artCollection = await response.json()
             res.render('index', {
                 title: 'overzicht iets',
                 data: artCollection.artObjects
-                
             })
            // console.log(artCollection);
         })
         .catch(err => res.send(err))
 })
 
-app.get('/details/:id', (req, res) => {
+app.get('/detail/:id', (req, res) => {
     fetch(`${baseURL}/${req.params.id}${key}`)
         .then(async response => {
             const artCollection = await response.json()
-            res.render('details', {
-                title: 'details',
-                data: artCollection.artObjects
+            console.log(artCollection);
+            res.render('detail', {
+                title: 'detail',
+                data: artCollection.artObject
                 
             })
         })

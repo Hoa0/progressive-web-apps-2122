@@ -2,7 +2,7 @@
 
     %>
     <li>
-        <a href="/details/<%- artItem.artid %>">
+        <a href="/detail/<%= artItem.id.substring(3) %>">
             <figure>
                 <img src="<%= artItem.webImage.url %>" alt="image art">
                 <figcaption>
