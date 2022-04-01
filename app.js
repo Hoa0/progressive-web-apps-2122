@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
             const artCollection = await response.json()
             res.render('index', {
                 title: 'overzicht iets',
-                data: artCollection.artObjects // laat meerdere objecten zien
+                data: artCollection.artObjects 
             })
            // console.log(artCollection);
         })
