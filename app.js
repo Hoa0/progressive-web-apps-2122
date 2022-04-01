@@ -18,23 +18,6 @@ app.set('view engine', 'ejs')
 const {
     API_KEY
 } = process.env
-/*
-app.get('/', (req, res) => {
-  res.render('home',{
-    title:'List of all artcollection hi'
-  });
-});
-
-
-app.get('/overview', async(req, res) => {
- const getData = await fetch(endpoint);
- const json = await getData.json();
-console.log(json);
-
-  res.render('overview',{
-    title:'overzicht',
-  });
-});*/
 
 app.get('/', (req, res) => {
     fetch(`${baseURL}/${key}`)
@@ -42,7 +25,7 @@ app.get('/', (req, res) => {
             const artCollection = await response.json()
             res.render('index', {
                 title: 'overzicht iets',
-                data: artCollection.artObjects
+                data: artCollection.artObjects // laat meerdere objecten zien
             })
            // console.log(artCollection);
         })
@@ -56,7 +39,7 @@ app.get('/detail/:id', (req, res) => {
             console.log(artCollection);
             res.render('detail', {
                 title: 'detail',
-                data: artCollection.artObject
+                data: artCollection.artObject // laat 1 object zien
                 
             })
         })
