@@ -27,7 +27,6 @@ app.get('/', (req, res) => {
                 title: 'overzicht iets',
                 data: artCollection.artObjects 
             })
-           // console.log(artCollection);
         })
         .catch(err => res.send(err))
 })
