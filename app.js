@@ -1,26 +1,23 @@
-
-//import fetch from 'node-fetch';
-//const express = require('express','4.17.3')
 const fetch =require('node-fetch')
 const express = require('express')
 const app = express()
-const dotenv = require("dotenv").config({path: '.env-dev'});
+const dotenv = require("dotenv").config({path: '.env'});
 const port = process.env.port || 3000;
-
-
-const baseURL = 'https://www.rijksmuseum.nl/api/nl/collection'
-const key = '?key=m37TFPjT&ps=20'
-const endpoint ='https://www.rijksmuseum.nl/api/nl/collection?key=m37TFPjT&ps=20'
-
-app.use(express.static('static'))
-app.set('view engine', 'ejs')
 
 const {
     API_KEY
 } = process.env
 
+const baseURL = 'https://www.rijksmuseum.nl/api/nl/collection'
+const endpoint =`https://www.rijksmuseum.nl/api/nl/collection${API_KEY}`
+
+app.use(express.static('static'))
+app.set('view engine', 'ejs')
+
+
+
 app.get('/', (req, res) => {
-    fetch(`${baseURL}/${key}`)
+    fetch(`${endpoint}`)
         .then(async response => {
             const artCollection = await response.json()
             res.render('index', {
@@ -32,7 +29,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/detail/:id', (req, res) => {
-    fetch(`${baseURL}/${req.params.id}${key}`)
+    fetch(`${baseURL}/${req.params.id}${API_KEY}`)
         .then(async response => {
             const artCollection = await response.json()
             console.log(artCollection);
