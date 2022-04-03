@@ -42,6 +42,13 @@ app.get('/detail/:id', (req, res) => {
         .catch(err => res.send(err))
 })
 
+
+app.get("/offline", (req, res) => {
+    res.render("offline", {
+        title: 'offline',
+    });
+  });
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

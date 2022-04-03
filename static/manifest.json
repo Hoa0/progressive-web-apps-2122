@@ -3,26 +3,9 @@
     "name": "Progressive Web Apps - Thuan-Hoa 2022",  
     "short_name": "PWA",  
     "description": "een beschrijving over de applicatie",  
-    "start_url": "./index.html",  
-    "icons": [  
-      {  
-        "src": "/icons/todo-36.png",  
-        "sizes": "36x36",  
-        "type": "image/png"  
-      },  
-      {  
-        "src": "/icons/todo-48.png",  
-        "sizes": "48x48",  
-        "type": "image/png"  
-      },  
-      {  
-        "src": "/icons/todo-512.png",  
-        "sizes": "512x512",  
-        "type": "image/png"  
-      }  
-    ],  
-    "theme_color": "#111111",  
-    "background_color": "#DDDDDDD",  
+    "start_url": "/",  
+    "theme_color": "#E5D2C4",  
+    "background_color": "#E5D2C4",  
     "display": "fullscreen",  
-    "orientation": "portrait"  
+    "orientation": "portrait"
   }  
