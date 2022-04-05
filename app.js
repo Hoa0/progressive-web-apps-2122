@@ -1,7 +1,9 @@
-const fetch =require('node-fetch')
+const fetch = require('node-fetch')
 const express = require('express')
 const app = express()
-const dotenv = require("dotenv").config({path: '.env'});
+const dotenv = require("dotenv").config({
+    path: '.env'
+});
 const port = process.env.port || 3000;
 
 const {
@@ -9,7 +11,7 @@ const {
 } = process.env
 
 const baseURL = 'https://www.rijksmuseum.nl/api/nl/collection'
-const endpoint =`https://www.rijksmuseum.nl/api/nl/collection${API_KEY}`
+const endpoint = `https://www.rijksmuseum.nl/api/nl/collection${API_KEY}`
 
 app.use(express.static('static'))
 app.set('view engine', 'ejs')
@@ -23,7 +25,7 @@ app.get('/', (req, res) => {
             res.render('index', {
                 title: 'Art overview',
                 titlePage: 'Artcollection',
-                data: artCollection.artObjects 
+                data: artCollection.artObjects
             })
         })
         .catch(err => res.send(err))
@@ -38,7 +40,7 @@ app.get('/detail/:id', (req, res) => {
                 title: 'Detailpage',
                 titlePage: 'Art detail',
                 data: artCollection.artObject // laat 1 object zien
-                
+
             })
         })
         .catch(err => res.send(err))
@@ -55,10 +57,10 @@ app.get("/offline", (req, res) => {
         title: 'offline',
         titlePage: 'Geen internet',
     });
-  });
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })
 
 /*
