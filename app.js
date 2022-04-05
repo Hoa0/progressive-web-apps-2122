@@ -42,6 +42,11 @@ app.get('/detail/:id', (req, res) => {
         .catch(err => res.send(err))
 })
 
+/*
+app.get('/search', (req, res) =>){
+    let url = ``
+}*/
+
 
 app.get("/offline", (req, res) => {
     res.render("offline", {
