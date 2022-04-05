@@ -69,11 +69,6 @@ form {
 }
 
 input[type=search] {
-    /*  padding: 10px;
-    border: 0;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
-    border-radius: 10px;
-    width: 100%;*/
     border: 1px solid grey;
     border-radius: 5px;
     height: 25px;
@@ -102,11 +97,14 @@ figure {
 }
 
 figure>figcaption {
-    font: italic smaller sans-serif;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff;
+    font: italic smaller sans-serif;
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    max-width: 100%;
 }
 
 img {
@@ -146,6 +144,10 @@ footer {
         line-height: 4em;
     }
 
+    header input[type=search] {
+        width: 50%;
+    }
+
     main {
         min-height: 100vh;
         padding: 2rem 0;
@@ -174,9 +176,10 @@ footer {
         border: 0.5em solid white;
     }
 
-    figure>figcaption {
+    ul>li figure>figcaption {
         width: 40vw;
         background-color: #ffffff;
         color: #000000;
+
     }
 }
