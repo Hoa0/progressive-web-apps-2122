@@ -96,21 +96,17 @@ header h1 {
 }
 
 /* styling list and image */
-ul>li>figure {
+figure {
     padding: 0;
-    margin: 0;
+    margin: 0 0 1em 0;
 }
 
 figure>figcaption {
-    position: relative;
-    top: -1em;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
     font: italic smaller sans-serif;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
-    display: block;
-    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 img {

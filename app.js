@@ -21,7 +21,8 @@ app.get('/', (req, res) => {
         .then(async response => {
             const artCollection = await response.json()
             res.render('index', {
-                title: 'overzicht iets',
+                title: 'Art overview',
+                titlePage: 'Artcollection',
                 data: artCollection.artObjects 
             })
         })
@@ -34,7 +35,8 @@ app.get('/detail/:id', (req, res) => {
             const artCollection = await response.json()
             console.log(artCollection);
             res.render('detail', {
-                title: 'detail',
+                title: 'Detailpage',
+                titlePage: 'Art detail',
                 data: artCollection.artObject // laat 1 object zien
                 
             })
@@ -51,6 +53,7 @@ app.get('/search', (req, res) =>){
 app.get("/offline", (req, res) => {
     res.render("offline", {
         title: 'offline',
+        titlePage: 'Geen internet',
     });
   });
 
