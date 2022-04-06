@@ -2,9 +2,8 @@
     <h2>
         <%= titlePage %>
     </h2>
-    <form>
-        <label class="hide-elements" for="site-search">Search the site:</label>
-        <input type="search" id="site-search" name="q" aria-label="Search through site content">
-        <button id="btn-search">Search</button>
+    <form method="get" action="/search">
+        <input placeholder="Zoek kunstwerken" type="search" name="searchInput">
+        <button id="btn-search" aria-label="zoeken">zoeken</button>
     </form>
 </header>

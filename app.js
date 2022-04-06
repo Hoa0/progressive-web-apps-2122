@@ -1,5 +1,9 @@
 const fetch = require('node-fetch')
-const express = require('express')
+const express = require('express');
+const {
+    response
+} = require('express');
+const res = require('express/lib/response');
 const app = express()
 const dotenv = require("dotenv").config({
     path: '.env'
@@ -46,10 +50,18 @@ app.get('/detail/:id', (req, res) => {
         .catch(err => res.send(err))
 })
 
-/*
-app.get('/search', (req, res) =>){
-    let url = ``
-}*/
+app.get('/search', (req, res) => {
+    fetch(`${endpoint}&q=${req.query.searchInput}&imgonly=true`)
+        .then(async response => {
+            const artCollection = await response.json()
+            res.render('index', {
+                title: 'Art overview',
+                titlePage: 'Artcollection',
+                data: artCollection.artObjects
+            })
+        })
+        .catch(err => res.send(err))
+})
 
 
 app.get("/offline", (req, res) => {
