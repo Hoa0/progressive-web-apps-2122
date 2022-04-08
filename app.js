@@ -8,7 +8,7 @@ const app = express()
 const dotenv = require("dotenv").config({
     path: '.env'
 });
-const port = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 
 const {
     API_KEY
@@ -71,8 +71,8 @@ app.get("/offline", (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`)
 })
 
 /*
