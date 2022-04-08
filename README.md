@@ -5,6 +5,7 @@
 - [Description](#description)
 - [Goals](#goals)
 - [Installation](#Installation)
+- [Backlog](#backlog)
 
 ## Description
 
@@ -26,6 +27,12 @@ Clone this project
 git clone https://github.com/Hoa0/progressive-web-apps-2122.git
 ```
 
+Install all packages
+
+```commandline
+npm install
+```
+
 Start project
 
 ```commandline
@@ -35,10 +42,19 @@ npm start
 ## Backlog
 
 - [x] Detailpage - render different data from api
-- [ ] Search
-- [ ] Detailpage - Back to home
+- [x] Search
+- [x] Detailpage - Back to home
+- [x] Install service worker
+- [x] Offline fallback page by using service worker
 - [ ] Detailpage - add styling
 - [ ] Setup hosting
 - [ ] Placeholder text for when image or text returns empty from API
-- [ ] Install service worker
-- [ ] Offline fallback page by using service worker
+- [ ] Optimize the performance
+- [ ] Readme
+  - User Story
+  - Activity Diagram
+  - API
+
+## License
+
+[MIT License](https://github.com/Hoa0/progressive-web-apps-2122/blob/main/LICENSE)
