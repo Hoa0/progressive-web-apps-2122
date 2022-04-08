@@ -29,7 +29,7 @@ For this project I use an API from [Rijks Data](https://data.rijksmuseum.nl/obje
 
 ## Activity Diagram
 
-<img src="https://github.com/Hoa0/progressive-web-apps-2122/blob/main/static/images/Activity-Diagram.png" width="500">
+<img src="https://github.com/Hoa0/progressive-web-apps-2122/blob/main/static/images/Activity-Diagram.png" width="800">
 
 ## Goals
 
