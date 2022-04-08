@@ -1,8 +1,11 @@
 # Progressive Web Apps @cmda-minor-web · 2021/22
 
+Project link: [Rijksmuseum PWA](https://rijksmuseum-pwa.herokuapp.com)
+
 ## Table of Contents
 
 - [Description](#description)
+- [User story](#userstory)
 - [Goals](#goals)
 - [Installation](#Installation)
 - [Backlog](#backlog)
@@ -10,6 +13,13 @@
 ## Description
 
 Progressive Web App.
+
+- Create a Single page application
+- Implemented a usefull Service Worker
+
+## User Story
+
+> As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown Rijksmuseum - RijksData API
 
 ## Goals
 
