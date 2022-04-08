@@ -5,6 +5,7 @@ const {
 } = require('express');
 const res = require('express/lib/response');
 const app = express()
+const compression = require('compression')
 const dotenv = require("dotenv").config({
     path: '.env'
 });
@@ -17,6 +18,13 @@ const {
 const baseURL = 'https://www.rijksmuseum.nl/api/nl/collection'
 const endpoint = `https://www.rijksmuseum.nl/api/nl/collection${API_KEY}`
 
+app.use(compression())
+
+/* Cache header*/
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+    res.setHeader('Cache-Control', 'max-age=365000000, immutable');
+    next();
+});
 app.use(express.static('static'))
 app.set('view engine', 'ejs')
 

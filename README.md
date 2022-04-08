@@ -6,6 +6,7 @@ Project link: [Rijksmuseum PWA](https://rijksmuseum-pwa.herokuapp.com)
 
 - [Description](#description)
 - [User story](#userstory)
+- [API](#api)
 - [Goals](#goals)
 - [Installation](#Installation)
 - [Backlog](#backlog)
@@ -20,6 +21,10 @@ Progressive Web App.
 ## User Story
 
 > As an art lover, I want to be able to search and view art from the Rijksmuseum at home, so that I can still enjoy art during a lockdown Rijksmuseum - RijksData API
+
+## API
+
+For this project I use an API from [Rijks Data](https://data.rijksmuseum.nl/object-metadata/api/)
 
 ## Goals
 
