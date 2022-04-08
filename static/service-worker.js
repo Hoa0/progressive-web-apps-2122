@@ -2,8 +2,7 @@ const CORE_CACHE_VERSION = 'v1' // cache naam in de application
 const CORE_ASSETS = [
   '/',
   '/offline',
-  '/css/rijksmuseum.css',
-  'manifest.json'
+  '/css/rijksmuseum.css'
 ]
 
 self.addEventListener('install', event => {
@@ -51,6 +50,7 @@ self.addEventListener('fetch', (event) => {
   } else if (isHtmlGetRequest(event.request)) {
     console.log('html get request', event.request.url)
     // generic fallback
+    // als de url nog niet in de cache staat -> geef offline page weer
     event.respondWith(
       caches.open('html-cache')
       .then(cache => cache.match(event.request.url))

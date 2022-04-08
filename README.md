@@ -26,6 +26,10 @@ Progressive Web App.
 
 For this project I use an API from [Rijks Data](https://data.rijksmuseum.nl/object-metadata/api/)
 
+## Activity Diagram
+
+<img src="Activity-Diagram.png" width="500">
+
 ## Goals
 
 After finishing this program you can:

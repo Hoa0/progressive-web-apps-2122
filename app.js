@@ -25,7 +25,7 @@ app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
     res.setHeader('Cache-Control', 'max-age=365000000, immutable');
     next();
 });
-app.use(express.static('static'))
+app.use(express.static(__dirname + '/static'))
 app.set('view engine', 'ejs')
 
 
