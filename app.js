@@ -21,7 +21,6 @@ app.use(express.static('static'))
 app.set('view engine', 'ejs')
 
 
-
 app.get('/', (req, res) => {
     fetch(`${endpoint}`)
         .then(async response => {
@@ -74,11 +73,3 @@ app.get("/offline", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}`)
 })
-
-/*
-async function getData(url){
-  return await fetch(url)
-  .then((response) => response.json())
-  .then((body)=> body.data)
-  .catch((error) => error)
-}*/
